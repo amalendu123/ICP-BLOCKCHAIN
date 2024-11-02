@@ -1,0 +1,15 @@
+type DateRecord = record{
+    date: int64;
+    ccids: vec text;
+};
+
+service : {
+    add_hash : (hash_input: text) -> (text);
+
+    get_date_data : (timestamp: int64) -> (opt DateRecord) ;
+
+    get_all_data : () -> (vec DateRecord) ;
+
+    format_date : (date_key: int) -> (text);
+};
+

@@ -4,12 +4,17 @@
         "ccid_tracker": {
             "type": "rust",
             "package": "ccid_tracker",
-            "candid": "src/declarations/ccid_tracker/ccid_tracker.did"
+            "candid": "src/ccid_tracker/ccid_tracker.did",
+            "declarations": {
+                "output": "src/declarations/ccid_tracker",
+                "node_compatibility": true,
+                "bindings": ["js", "ts", "did", "mo"]
+            }
         }
     },
     "defaults": {
         "build": {
-            "packtool": "",
+            "packtool": "cargo",
             "args": ""
         }
     },
